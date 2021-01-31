@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/site.css">
+    <title>Pet Care</title>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><img class="logo" src="../static/images/paw.svg"></li>
+        <li class="title">Animal Care</li>
+        <li><a href="{% url 'home page' %}">Home</a></li>
+        <li><a href="{% url 'add animal page' %}">Add Animal</a></li>
+    </ul>
+</nav>
+<div class="content">
+
+    <h1> Sick animals in clinic </h1>
+
+    <div class="animals-container">
+        {% for animal in animals %}
+            {% if animal.is_cured == False %}
+                <div class="animal-card">
+                    <img src="{{ pet.image_url }}" class="..." alt="...">
+                    <h3>{{ animal.name }}</h3>
+
+                    <p class="priority high">{{ animal.priority }}</p>
+
+                    <div class="buttons-container">
+
+                        <a class="button details" href="{% url 'details animal page' animal.pk %}">Details </a>
+                        <a class="button edit" href="{% url 'edit animal page' animal.pk %}">Edit </a>
+                        <a class="button cure" href="{% url 'cure animal' animal.pk %}">Cure </a>
+
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+
+    </div>
+
+    <h1> Cured animals </h1>
+
+    <div class="animals-container">
+        {% for animal in animals %}
+            {% if animal.is_cured == True %}
+                <div class="animal-card">
+                    <img src="{{ pet.image_url }}" class="..." alt="...">
+                    <h3>{{ animal.name }}</h3>
+
+                    <p class="priority cured">CURED</p>
+
+                    <div class="buttons-container">
+
+                        <a class="button delete" href="{% url 'delete animal page' animal.pk %}">Delete </a>
+
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+
+</div>
+<footer> Python Web Basics Retake Exam @SoftUni</footer>
+
+</body>
+
+</html>

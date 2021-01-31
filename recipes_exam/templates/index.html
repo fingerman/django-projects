@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<div>
+
+    {% for recipe in recipes %}
+        <div>
+            <p>  {{ recipe.title }}</p>
+            <p>    {{ recipe.image_url }}</p>
+            <p>   {{ recipe.description }}</p>
+
+        </div>
+        <div class="right">
+            <a class="button details" href="{% url 'details recipe page' recipe.pk %}">Details </a>
+            <a class="button edit" href="{% url 'edit recipe page' recipe.pk %}">Edit </a>
+            <a class="button delete" href="{% url 'delete recipe page' recipe.pk %}">Delete </a>
+
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

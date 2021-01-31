@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+
+
+
+<p>  {{ recipe.title }}</p>
+<p>    {{ recipe.image_url }}</p>
+<p>   {{ recipe.description }}</p>
+<p>   {{ recipe.ingredients }}</p>
+<p>   {{ recipe.time }}</p>
+
+
+<div class="right">
+<a class="button edit" href="{% url 'edit recipe page' recipe.pk %}">Edit </a>
+<a class="button delete" href="{% url 'delete recipe page' recipe.pk %}">Delete </a>
+
+</div>
+
+
+</body>
+</html>

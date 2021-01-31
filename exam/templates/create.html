@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/site.css">
+    <title>Pet Care</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+          <li><img class="logo" src="../static/images/paw.svg"></li>
+            <li class="title">Animal Care</li>
+            <li><a href="{% url 'home page' %}">Home</a></li>
+            <li><a href="{% url 'add animal page' %}">Add Animal</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+
+        <h1>Add Animal</h1>
+        <form method="POST">
+            <input type="hidden" name="csrfmiddlewaretoken" value="Qm8c3gRP6sXhMqKyFVJXL4SsYRF9bbK2z5jkI9GviMqvreyjAM9kA9IPv446z91K">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="name">Animal Name</label>
+                {{ form.name }}
+            </div>
+            <div class="input-group">
+                <label for="image">Animal Picture</label>
+{#                <input type="url" name="image_url" maxlength="200" required="" id="id_image_url">#}
+                {{ form.image_url }}
+            </div>
+            <div class="input-group">
+                <label for="description">Animal Description</label>
+                {{ form.description }}
+{#                <textarea name="description" cols="40" rows="4" maxlength="250" required="" id="id_description"></textarea>#}
+            </div>
+            <div class="input-group">
+                <label for="priority">Animal Priority</label>
+
+              {{ form.priority }}
+            </div>
+            <div class="input-group">
+                <input class="button primary" type="submit" value="Add">
+            </div>
+        </form>
+
+    </div>
+    <footer> Python Web Basics Retake Exam @SoftUni </footer>
+
+</body>
+
+</html>

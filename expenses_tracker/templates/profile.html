@@ -1,0 +1,17 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+    <title>Expenses Tracker</title>
+</head>
+
+<body>
+    
+{{ profile.first_name }}
+{{ profile.last_name }}
+{{ profile.budget_left }}
+<div class="right">
+                    <a class="button edit" href="{% url 'edit profile' %}">Edit Profile</a>
+                    <a class="button delete" href="{% url 'delete profile' %}">Delete Profile</a>
+                </div>
+</body></html>

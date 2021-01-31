@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../REST-API-CRM/.idea/REST-API-CRM.iml" filepath="$PROJECT_DIR$/../REST-API-CRM/.idea/REST-API-CRM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/exam.iml" filepath="$PROJECT_DIR$/.idea/exam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../petstagram/.idea/petstagram.iml" filepath="$PROJECT_DIR$/../petstagram/.idea/petstagram.iml" />
+    </modules>
+  </component>
+</project>

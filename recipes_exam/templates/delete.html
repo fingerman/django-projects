@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="{% url 'delete recipe page' recipe.pk %}">
+        {% csrf_token %}
+        <button class="delete">Confirm</button>
+    </form>
+</body>
+</html>

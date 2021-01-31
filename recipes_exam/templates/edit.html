@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="form">
+        <form method="post" class="m-auto w-25">
+        {% csrf_token %}
+            {{ form }}
+{#            {{ form.title }}#}
+{#            {{ form.image_url }}#}
+{#            {{ form.description }}#}
+{#            {{ form.ingredients }}#}
+{#            {{ form.time }}#}
+
+        <button type="submit" class="btn btn-primary mx-auto">Edit</button>
+    </form>
+</div>
+</body>
+</html>
